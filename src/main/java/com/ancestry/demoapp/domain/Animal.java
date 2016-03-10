@@ -26,7 +26,7 @@ public class Animal implements Serializable {
     @NotNull
     @Column(name = "animal_name", nullable = false)
     private String animalName;
-    
+
     @ManyToOne
     @JoinColumn(name = "animal_species_id")
     private AnimalSpecies animalSpecies;
@@ -51,7 +51,7 @@ public class Animal implements Serializable {
     public String getAnimalName() {
         return animalName;
     }
-    
+
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
     }
@@ -78,6 +78,15 @@ public class Animal implements Serializable {
 
     public void setFeedings(Set<Feeding> feedings) {
         this.feedings = feedings;
+    }
+
+    public Set<Feeding> getSafeFeedings() {
+        // make a copy of the feedings
+//        return safeFeedings;
+    }
+
+    public void setSafeFeedings(Set<Feeding> safeFeedings) {
+//        this.safeFeedings = safeFeedings;
     }
 
     @Override
