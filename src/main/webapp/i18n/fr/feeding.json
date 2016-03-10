@@ -1,0 +1,26 @@
+{
+    "ancestryApp": {
+        "feeding" : {
+            "home": {
+                "title": "Feedings",
+                "createLabel": "Créer un nouveau Feeding",
+                "createOrEditLabel": "Créer ou éditer un Feeding",
+                "search": "Search for Feeding"
+            },
+            "created": "Un nouveau Feeding a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Feeding avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Feeding avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Feeding {{ id }} ?"
+            },
+            "detail": {
+                "title": "Feeding"
+            },
+            "feedingDate": "FeedingDate",
+            "quantity": "Quantity",
+            "animal": "Animal",
+            "inventory": "Inventory"
+        }
+    }
+}
+

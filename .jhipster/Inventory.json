@@ -1,0 +1,40 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "zoo",
+            "otherEntityName": "zoo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "zooName"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "feeding",
+            "otherEntityName": "feeding",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "inventory"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "inventoryDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "quantity",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160310125216",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

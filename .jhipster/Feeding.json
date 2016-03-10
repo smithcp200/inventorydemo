@@ -1,0 +1,40 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "animal",
+            "otherEntityName": "animal",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "animalName"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "inventory",
+            "otherEntityName": "inventory",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "inventoryDate"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "feedingDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "quantity",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160310125719",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

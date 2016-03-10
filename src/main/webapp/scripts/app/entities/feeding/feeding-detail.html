@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="ancestryApp.feeding.detail.title">Feeding</span> {{feeding.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="ancestryApp.feeding.feedingDate">FeedingDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{feeding.feedingDate | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ancestryApp.feeding.quantity">Quantity</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{feeding.quantity}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ancestryApp.feeding.animal">animal</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="animal.detail({id:feeding.animal.id})">{{feeding.animal.animalName}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ancestryApp.feeding.inventory">inventory</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="inventory.detail({id:feeding.inventory.id})">{{feeding.inventory.inventoryDate}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

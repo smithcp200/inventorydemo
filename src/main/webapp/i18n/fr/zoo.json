@@ -1,0 +1,25 @@
+{
+    "ancestryApp": {
+        "zoo" : {
+            "home": {
+                "title": "Zoos",
+                "createLabel": "Créer un nouveau Zoo",
+                "createOrEditLabel": "Créer ou éditer un Zoo",
+                "search": "Search for Zoo"
+            },
+            "created": "Un nouveau Zoo a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Zoo avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Zoo avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Zoo {{ id }} ?"
+            },
+            "detail": {
+                "title": "Zoo"
+            },
+            "zooName": "ZooName",
+            "inventory": "Inventory",
+            "animal": "Animal"
+        }
+    }
+}
+

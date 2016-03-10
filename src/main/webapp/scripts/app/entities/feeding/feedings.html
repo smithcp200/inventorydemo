@@ -1,0 +1,66 @@
+<div>
+    <h2 translate="ancestryApp.feeding.home.title">Feedings</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="feeding.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="ancestryApp.feeding.home.createLabel">Create new Feeding
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="ancestryApp.feeding.feedingDate">FeedingDate</span></th>
+                    <th><span translate="ancestryApp.feeding.quantity">Quantity</span></th>
+                    <th><span translate="ancestryApp.feeding.animal">animal</span></th>
+                    <th><span translate="ancestryApp.feeding.inventory">inventory</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="feeding in feedings track by feeding.id">
+                    <td><a ui-sref="feeding.detail({id:feeding.id})">{{feeding.id}}</a></td>
+                        <td>{{feeding.feedingDate | date:'mediumDate'}}</td>
+                    <td>{{feeding.quantity}}</td>
+                    <td>
+                        <a ui-sref="animal.detail({id:feeding.animal.id})">{{feeding.animal.animalName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="inventory.detail({id:feeding.inventory.id})">{{feeding.inventory.inventoryDate}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="feeding.detail({id:feeding.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="feeding.edit({id:feeding.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="feeding.delete({id:feeding.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

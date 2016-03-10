@@ -1,0 +1,32 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "inventory",
+            "otherEntityName": "inventory",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "zoo"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "animal",
+            "otherEntityName": "animal",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "zoo"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "zooName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160310124842",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

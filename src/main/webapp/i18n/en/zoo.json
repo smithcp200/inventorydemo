@@ -1,0 +1,24 @@
+{
+    "ancestryApp": {
+        "zoo" : {
+            "home": {
+                "title": "Zoos",
+                "createLabel": "Create a new Zoo",
+                "createOrEditLabel": "Create or edit a Zoo",
+                "search": "Search for Zoo"
+            },
+            "created": "A new Zoo is created with identifier {{ param }}",
+            "updated": "A Zoo is updated with identifier {{ param }}",
+            "deleted": "A Zoo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Zoo {{ id }}?"
+            },
+            "detail": {
+                "title": "Zoo"
+            },
+            "zooName": "ZooName",
+            "inventory": "Inventory",
+            "animal": "Animal"
+        }
+    }
+}

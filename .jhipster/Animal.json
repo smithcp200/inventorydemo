@@ -1,0 +1,32 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "animalSpecies",
+            "otherEntityName": "animalSpecies",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "animalSpeciesName"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "feeding",
+            "otherEntityName": "feeding",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "animal"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "animalName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160310125414",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

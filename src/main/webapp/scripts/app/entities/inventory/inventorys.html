@@ -1,0 +1,62 @@
+<div>
+    <h2 translate="ancestryApp.inventory.home.title">Inventorys</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="inventory.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="ancestryApp.inventory.home.createLabel">Create new Inventory
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="ancestryApp.inventory.inventoryDate">InventoryDate</span></th>
+                    <th><span translate="ancestryApp.inventory.quantity">Quantity</span></th>
+                    <th><span translate="ancestryApp.inventory.zoo">zoo</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="inventory in inventorys track by inventory.id">
+                    <td><a ui-sref="inventory.detail({id:inventory.id})">{{inventory.id}}</a></td>
+                        <td>{{inventory.inventoryDate | date:'mediumDate'}}</td>
+                    <td>{{inventory.quantity}}</td>
+                    <td>
+                        <a ui-sref="zoo.detail({id:inventory.zoo.id})">{{inventory.zoo.zooName}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="inventory.detail({id:inventory.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="inventory.edit({id:inventory.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="inventory.delete({id:inventory.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

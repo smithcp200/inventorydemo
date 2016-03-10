@@ -1,0 +1,70 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myFeedingLabel" translate="ancestryApp.feeding.home.createOrEditLabel">Create or edit a Feeding</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="feeding.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ancestryApp.feeding.feedingDate" for="field_feedingDate">FeedingDate</label>
+                <div class="input-group">
+                    <input id="field_feedingDate" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="feeding.feedingDate" is-open="datePickerForFeedingDate.status.opened"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="datePickerForFeedingDateOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.feedingDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.feedingDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ancestryApp.feeding.quantity" for="field_quantity">Quantity</label>
+            <input type="number" class="form-control" name="quantity" id="field_quantity"
+                    ng-model="feeding.quantity"
+                    required />
+            <div ng-show="editForm.quantity.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.quantity.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.quantity.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="ancestryApp.feeding.animal" for="field_animal">animal</label>
+            <select class="form-control" id="field_animal" name="animal" ng-model="feeding.animal" ng-options="animal as animal.animalName for animal in animals track by animal.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="ancestryApp.feeding.inventory" for="field_inventory">inventory</label>
+            <select class="form-control" id="field_inventory" name="inventory" ng-model="feeding.inventory" ng-options="inventory as inventory.inventoryDate for inventory in inventorys track by inventory.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

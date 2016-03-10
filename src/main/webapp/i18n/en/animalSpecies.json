@@ -1,0 +1,23 @@
+{
+    "ancestryApp": {
+        "animalSpecies" : {
+            "home": {
+                "title": "AnimalSpeciess",
+                "createLabel": "Create a new AnimalSpecies",
+                "createOrEditLabel": "Create or edit a AnimalSpecies",
+                "search": "Search for AnimalSpecies"
+            },
+            "created": "A new AnimalSpecies is created with identifier {{ param }}",
+            "updated": "A AnimalSpecies is updated with identifier {{ param }}",
+            "deleted": "A AnimalSpecies is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete AnimalSpecies {{ id }}?"
+            },
+            "detail": {
+                "title": "AnimalSpecies"
+            },
+            "animalSpeciesName": "AnimalSpeciesName",
+            "animal": "Animal"
+        }
+    }
+}
