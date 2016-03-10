@@ -8,6 +8,13 @@
             "otherEntityField": "animalSpeciesName"
         },
         {
+            "relationshipId": 1,
+            "relationshipName": "zoo",
+            "otherEntityName": "zoo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "zooName"
+        },
+        {
             "relationshipId": 2,
             "relationshipName": "feeding",
             "otherEntityName": "feeding",

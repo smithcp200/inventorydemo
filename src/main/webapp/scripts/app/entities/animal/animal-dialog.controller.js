@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('ancestryApp').controller('AnimalDialogController',
-    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Animal', 'AnimalSpecies', 'Feeding',
-        function($scope, $stateParams, $uibModalInstance, entity, Animal, AnimalSpecies, Feeding) {
+    ['$scope', '$stateParams', '$uibModalInstance', 'entity', 'Animal', 'AnimalSpecies', 'Zoo', 'Feeding',
+        function($scope, $stateParams, $uibModalInstance, entity, Animal, AnimalSpecies, Zoo, Feeding) {
 
         $scope.animal = entity;
         $scope.animalspeciess = AnimalSpecies.query();
+        $scope.zoos = Zoo.query();
         $scope.feedings = Feeding.query();
         $scope.load = function(id) {
             Animal.get({id : id}, function(result) {

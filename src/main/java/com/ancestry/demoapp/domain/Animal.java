@@ -31,6 +31,10 @@ public class Animal implements Serializable {
     @JoinColumn(name = "animal_species_id")
     private AnimalSpecies animalSpecies;
 
+    @ManyToOne
+    @JoinColumn(name = "zoo_id")
+    private Zoo zoo;
+
     @OneToMany(mappedBy = "animal")
     @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -58,6 +62,14 @@ public class Animal implements Serializable {
 
     public void setAnimalSpecies(AnimalSpecies animalSpecies) {
         this.animalSpecies = animalSpecies;
+    }
+
+    public Zoo getZoo() {
+        return zoo;
+    }
+
+    public void setZoo(Zoo zoo) {
+        this.zoo = zoo;
     }
 
     public Set<Feeding> getFeedings() {

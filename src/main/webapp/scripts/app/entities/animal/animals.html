@@ -21,6 +21,7 @@
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="ancestryApp.animal.animalName">AnimalName</span></th>
                     <th><span translate="ancestryApp.animal.animalSpecies">animalSpecies</span></th>
+                    <th><span translate="ancestryApp.animal.zoo">zoo</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -30,6 +31,9 @@
                     <td>{{animal.animalName}}</td>
                     <td>
                         <a ui-sref="animalSpecies.detail({id:animal.animalSpecies.id})">{{animal.animalSpecies.animalSpeciesName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="zoo.detail({id:animal.zoo.id})">{{animal.zoo.zooName}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ancestryApp')
-    .controller('AnimalDetailController', function ($scope, $rootScope, $stateParams, entity, Animal, AnimalSpecies, Feeding) {
+    .controller('AnimalDetailController', function ($scope, $rootScope, $stateParams, entity, Animal, AnimalSpecies, Zoo, Feeding) {
         $scope.animal = entity;
         $scope.load = function (id) {
             Animal.get({id: id}, function(result) {

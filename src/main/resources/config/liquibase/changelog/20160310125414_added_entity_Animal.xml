@@ -26,6 +26,7 @@
             </column>
             
             <column name="animal_species_id" type="bigint"/>
+            <column name="zoo_id" type="bigint"/>
             <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
         </createTable>
         
@@ -34,6 +35,12 @@
                                  constraintName="fk_animal_animalspecies_id"
                                  referencedColumnNames="id"
                                  referencedTableName="animal_species"/>
+
+        <addForeignKeyConstraint baseColumnNames="zoo_id"
+                                 baseTableName="animal"
+                                 constraintName="fk_animal_zoo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="zoo"/>
 
     </changeSet>
 </databaseChangeLog>

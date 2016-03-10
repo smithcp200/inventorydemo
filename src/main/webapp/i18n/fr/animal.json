@@ -18,6 +18,7 @@
             },
             "animalName": "AnimalName",
             "animalSpecies": "AnimalSpecies",
+            "zoo": "Zoo",
             "feeding": "Feeding"
         }
     }
